@@ -1,44 +1,37 @@
 #include<iostream>
+
 using namespace std;
 
 class A
 {
-    int a;
-		public  :
-	        void setData(char d)
+	int a,b;
+	
+	public :
+		input()
+		{
+			cout<<"Enter input :- ";
+			cin>>a;
+		}
+		
+		A operator < (A z)
+		{
+			if(a<z.a)
 			{
-	            cout <<"Enter the "<< d <<" :- ";
-	            cin  >>a;
-	        }
-	        void getData()
+				cout<<"Object 2 is large :"<<z.a;		
+			}
+			else
 			{
-	            cout << "A : "<< a << endl;
-	        }
-	        operator < (A&c)
-			{
-	            if (this -> a < c.a)
-				{
-	                return true;
-	            }
-	            else
-				{
-	                return false;
-	            }
-	        }
+				cout<<"Object 1 is large :"<<a;
+			}
+		}
 };
+
 int main()
 {
-
-    A a,b;
-    a.setData('A');
-    b.setData('B');
-
-    if(a < b)
-	{
-        cout <<"b is larger......."<<endl;
-    }
-    else
-	{
-        cout <<"a is larger........ "<<endl;
-    }
+    A p;
+    A q;
+    A r;
+    p.input();
+    q.input();
+    r=p<q;
 }
