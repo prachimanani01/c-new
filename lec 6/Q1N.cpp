@@ -14,7 +14,7 @@ class A
 			{
 	            cout << "A : "<< a << endl;
 	        }
-	        bool operator < (A&c)
+	        operator < (A&c)
 			{
 	            if (this -> a < c.a)
 				{
